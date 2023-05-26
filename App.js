@@ -22,19 +22,15 @@ export default function App() {
                 useNativeDriver: true,
               }).start();
             }}
-            resizeMode="cover"
+            resizeMode="stretch"
             shouldPlay
-            source={{
-              uri: "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
-            }}
-            style={{ flex: 1 }}
+            source={require("./assets/videos/video1.mp4")}
+            style={{ flex: 1,  }}
           />
         </Animated.View>
       </View>
       <View style={styles.overlay}>
         <Text style={styles.title}>
-          This is where you might put a button or some other text on top of the
-          video
         </Text>
       </View>
     </View>
@@ -44,7 +40,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    backgroundColor: "transparent",
     flex: 1,
     justifyContent: "center",
   },
@@ -57,7 +52,7 @@ const styles = StyleSheet.create({
   },
   overlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.4)",
+    
   },
   title: {
     color: "white",
